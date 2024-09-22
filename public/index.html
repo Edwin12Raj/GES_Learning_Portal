@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GES Learning Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-content">
+      <div class="logoBox">
+        <img src="./assets/logo.png" alt="Logo">
+      </div>
+      <h1>GES Learning Portal</h1>
+      <nav>
+        <ul>
+          <li><a href="#notes-section">Notes</a></li>
+          <li><a href="#upload-section">Upload</a></li>
+          <li><a href="#assignment-section">Assignments</a></li>
+          <li><a href="#">Support/Help</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Body -->
+  <main class="container">
+    <!-- Upload Section (Website Owner Only) -->
+    <section id="upload-section">
+      <h2>Upload Notes (Owner Only)</h2>
+      <div class="card">
+        <!-- Upload form for file submission -->
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+          <input type="file" name="notes" multiple>
+          <button type="submit">Upload Notes</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Notes Section -->
+    <section id="notes-section">
+      <h2>Uploaded Notes</h2>
+      <div class="notes-grid" id="notesGrid"></div>
+    </section>
+
+    <!-- Assignment Section -->
+    <section id="assignment-section">
+      <h2>Student Assignments</h2>
+      <div class="card">
+        <p>Upload your assignment here:</p>
+        <input type="file" id="assignmentInput" multiple>
+        <button id="assignmentBtn">Upload Assignment</button>
+      </div>
+
+      <!-- Uploaded Assignments Grid -->
+      <h2>Uploaded Assignments</h2>
+      <div class="assignments-grid" id="assignmentsGrid"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 GES Learning Portal | All rights reserved | Created by Edwin Raj</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
